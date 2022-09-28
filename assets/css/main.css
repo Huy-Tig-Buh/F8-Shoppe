@@ -1,6 +1,6 @@
 .header {
     background-image: linear-gradient(0,#f53e2d,#fe6433);
-    height: 120px;
+    height: var(--header-height);
 }
 
 .header__navbar-list li {
@@ -14,7 +14,7 @@
 
 .header__navbar-list {
     padding-left: 0;
-    margin-top: 4px;
+    margin: 4px 0 0 0;
 }
 
 .header__navbar-item {
@@ -112,6 +112,118 @@
     margin-top: 4px;
 }
 
+/* Header With Search */
+.header-with-search {
+    height: var(--header-width-search-height);
+    display: flex;
+    align-items: center;;
+}
+
+.header__logo {
+    width: 200px;
+    /* flex: 2; */
+}
+
+.header__logo-img {
+    width: 162px;
+    height: 50px;
+}
+
+.header__search {
+    flex: 13;
+    height: 40px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.header__search-input{
+    flex: 1;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    border-radius: 2px;
+    border: none;
+    outline: none;
+}
+
+.header__search-selection{
+    border-left: 1px solid var(--border-color);
+    padding-left: 16px;
+    position: relative;
+}
+
+.header__search-select-label {
+    font-size: 1.4rem;
+    color: var(--black-color);
+}
+
+.header__search-select-icon {
+    margin: 0 8px;
+    font-size: 1.4rem;
+    color: #848484;
+}
+
+.header__search-option {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 150px;
+    list-style: none;
+    margin-top: 16px;
+}
+
+.header__search-option-item {
+    background-color: var(--white-color);
+    border-radius: 3px;
+    padding: 8px;
+    text-align: right;
+}
+
+.header__search-option-item span { 
+    font-size: 1.4rem;
+    color: var(--black-color);
+}
+
+.header__search-option-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.header__search-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    width: 60px;
+    height: 34px;
+    margin-right: 3px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.header__search-btn:hover {
+    opacity: .8;
+}
+
+.header__search-btn-icon {
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+.header__cart {
+    width: 150px;
+    text-align: center;
+}
+
+.header__cart-icon {
+    font-size: 2.6rem;
+    color: var(--white-color);
+    cursor: pointer;
+    margin-top: 4px;
+}
 /* Thông Báo Navbar */
 .header__notify {
     position: absolute;;
@@ -316,7 +428,7 @@
     display: inline-block;
     height: 28px;
     margin: 0 16px;
-    transform: translateY(-8px);    
+    transform: translateY(-8px);
     border-left: 1px solid var(--border-color);
 }
 
